@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi_Yinn | Web Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Hi_Yinn</div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Halo,<br>Aku <span>Hayyin</span><br>Web Developer</h1>
+    </div>
+    <div class="hero-img">
+      <img src="assets/profile.jpg" alt="Profile" />
+    </div>
+    <canvas id="particles"></canvas>
+  </section>
+
+<section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>Hi! Aku Hayyin, seorang web developer yang suka bikin website modern dan minimalis. Spesialisasi di frontend dan UI/UX, tapi juga bisa backend PHP. Let's connect!</p>
+  </section>
+
+<section id="skills" class="skills reveal">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <i class="fab fa-html5"></i>
+      <h3>HTML</h3>
+      <p>Struktur dasar website yang kuat dan rapi.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-css3-alt"></i>
+      <h3>CSS</h3>
+      <p>Styling responsif dan animasi keren buat tampilan modern.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-js"></i>
+      <h3>JavaScript</h3>
+      <p>Interaktif dan dinamis, bikin web lebih hidup.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-php"></i>
+      <h3>PHP</h3>
+      <p>Logika backend dan koneksi database.</p>
+    </div>
+    <!-- Tambah skill lain di sini kalau mau -->
+  </div>
+</section>
+
+
+
+<section id="contact" class="reveal">
+    <h2>Projects</h2>
+    <p>Project list goes here...</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+<form class="contact-form" id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/hi_yinn_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/Itsyinn" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://github.com/YinXa" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://discord.com/yinnzu" target="_blank"><i class="fab fa-discord"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hayyin Sabila. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles', 'particles.json', function() {
+      console.log('Particles loaded');
+    });
+  </script>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, options);
+
+  reveals.forEach(reveal => {
+    observer.observe(reveal);
+  });
+</script>
+  <script src="js/script.js"></script>
+
+
+</body>
+</html>
